@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --bg-white:#ffffff;
+    --gray:#808080;
+}
+html{
+    scroll-padding-top: 6rem;
+}
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%;
+    background-color: var(--bg-white);
+}
+.logo{
+    font-size: 25px;  
+    
+}
+.ani{
+    animation: animated-image 3s linear infinite;
+}
+@keyframes animated-image{
+0%{
+    transform:translateX(0);
+}
+50%{
+    transform:translateX(5%) ; 
+}
+100%{
+    transform:translateX(0) ;
+}
+}
+.animate{
+    animation: animated-image 3s linear infinite;
+}
+@keyframes animated-image{
+0%{
+    transform:translateX(0);
+}
+50%{
+    transform:translateX(-5%) ; 
+}
+100%{
+    transform:translateX(0) ;
+}
+}
+.logo span{
+    font-weight: 800;
+    font-size: 30px;
+}
+.txt{
+    width: 30%;
+    padding-left: 2%;
+    border-left: 1px solid var(--gray);
+}
+a{
+    text-decoration: none;
+    color: #111;
+}
+.nav-links .a{
+    margin-left: 2%;
+}
+.nav-links{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    border-right: 1px solid var(--gray);
+    padding-right: 2%;
+}
+.menu{
+    display: none;
+}
+.home{
+    background: url('images/slider-02.png');
+   
+    background-size:contain ;
+    
+}
+.home h1{
+    font-family: "Muli",Tahoma,Geneva,sans-serif;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 300;
+}
+.home h1 strong{
+    color: #0067ed;
+    font-weight: 600;
+}
+.home h6{
+    font-size: 13px;
+}
+.div{
+    background-color: rgba(233, 246, 255, 0.7);
+    height: 100%;
+}
+.servhead {
+    font-family: "Roboto",Arial,Helvetica,sans-serif;
+    font-weight: 10px;
+    text-transform: capitalize;
+    font-size: 40px;
+    line-height: 52px;
+    color: #1d2143;
+}
+
+.services .card{
+    display: flex;
+}
+.car{
+    position: relative;
+}
+.car .card{
+    position: absolute;
+    height: 240px;
+    padding: 2%;
+    
+}
+.car .card img{
+    width: 80px;
+}
+.visa i{
+    padding: 30px;
+    font-size: 30px;
+    border-radius: 50%;
+}
+
+footer i{
+    background-color: #f1f1f1;
+    color: #111;
+}
+footer{
+    background-color: #110d16;
+}
+footer a{
+    text-decoration: none;
+    color: var(--bg-white);
+    display: inline-block;
+    width: 10%;
+}
+.center{
+    border-left: 1px solid var(--bg-white);
+    border-right: 1px solid var(--bg-white);
+}
+.blog img{
+    border-radius: 5px 5px 0 0;
+}
+header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+@media screen and (max-width:850px) {
+    
+    .menu{
+        display: block;
+       float: left;
+        color: #111;
+    } 
+    .nav-links a{
+        padding-top: 10px;
+        padding-bottom: 10px;
+      
+    }
+    
+    .txt{
+        display: none;
+    }
+    .nav-links {
+        background-color: rgb(242, 245, 248);
+        position: absolute;
+        left: -100%;
+        top :100%;
+        flex-direction: column;
+        transition: all 500ms;
+        width: 100%;
+        text-align: center;
+        z-index: 3;
+    }
+    .toggle{
+        left: 0;
+    }
+    footer a{
+       
+       width: 20%;
+       
+    }
+    .visa{
+        margin-top: 30%;
+    }
+    
+}
+@media screen and (max-width:570px) {
+    .visa{
+        margin-top: 50%;
+    }
+    
+}
+@media screen and(max-width:407px) {
+    .car .card{
+        height: 250px;
+       } 
+       footer a{
+       
+        width: 30%;
+        
+     }
+    }
+    @media screen and (max-width:350px) {
+        .visa{
+            margin-top: 80%;
+        }
+        .car .card{
+            height: 270px;
+           } 
+    }  
